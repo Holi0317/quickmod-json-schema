@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 '''
-Test if index.json will validate correct json file.
+Test if main.json will validate json file correctly.
 '''
 
 import unittest
@@ -31,14 +31,14 @@ class TestIndexJson(unittest.TestCase):
         'Setup variables'
         super(TestIndexJson, self).__init__(*args, **kwargs)
 
-        data_dir = os.path.join(THIS_DIR, 'data/index')
+        data_dir = os.path.join(THIS_DIR, 'data/main')
 
         # Paths of files
-        schema = os.path.join(THIS_DIR, '../index.json')
+        schema = os.path.join(THIS_DIR, '../main.json')
 
         # Without optional data
         valid_data = os.path.join(data_dir, 'valid1.json')
-        # With optional data, baseUrl
+        # With some optional data
         valid_data_optional = os.path.join(data_dir, 'valid2.json')
 
         # Some items got missing url or uid key

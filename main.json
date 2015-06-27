@@ -6,7 +6,9 @@
     "formatVersion": {
       "id": "http://holi0317.net/schemas/formatVersion",
       "type": "integer",
-      "enum": [1]
+      "enum": [
+        1
+      ]
     },
     "updateUrl": {
       "id": "http://holi0317.net/schemas/updateUrl",
@@ -26,18 +28,63 @@
       "items": {
         "id": "http://holi0317.net/schemas/versions/0",
         "type": "object",
+        "required": [
+          "urls",
+          "versions"
+        ],
         "properties": {
-          "installType": {
-            "id": "http://holi0317.net/schemas/versions/0/installType",
-            "type": "string"
+          "urls": {
+            "anyOf": [
+              {
+                "type": "array",
+                "items": {
+                  "id": "http://holi0317.net/schemas/versions/0/urls/0",
+                  "type": "object",
+                  "properties": {
+                    "url": {
+                      "id": "http://holi0317.net/schemas/versions/0/urls/0/url",
+                      "type": "string",
+                      "format": "uri"
+                    },
+                    "downloadType": {
+                      "id": "http://holi0317.net/schemas/versions/0/urls/0/downloadType",
+                      "type": "string",
+                      "enum": [
+                        "direct",
+                        "parallel",
+                        "sequential"
+                      ],
+                      "default": "parallel"
+                    }
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "url": {
+                    "id": "http://holi0317.net/schemas/versions/0/urls/0/url",
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "downloadType": {
+                    "id": "http://holi0317.net/schemas/versions/0/urls/0/downloadType",
+                    "type": "string",
+                    "enum": [
+                      "direct",
+                      "parallel",
+                      "sequential",
+                      "encoded"
+                    ],
+                    "default": "parallel"
+                  }
+                }
+              }
+            ]
           },
-          "mcCompat": {
-            "id": "http://holi0317.net/schemas/versions/0/mcCompat",
-            "type": "array",
-            "items": {
-              "id": "http://holi0317.net/schemas/versions/0/mcCompat/0",
-              "type": "string"
-            }
+          "version": {
+            "id": "http://holi0317.net/schemas/versions/0/version",
+            "type": "string"
           },
           "name": {
             "id": "http://holi0317.net/schemas/versions/0/name",
@@ -46,33 +93,52 @@
           "references": {
             "id": "http://holi0317.net/schemas/versions/0/references",
             "type": "array",
-            "items": []
-          },
-          "sha1": {
-            "id": "http://holi0317.net/schemas/versions/0/sha1",
-            "type": "string"
-          },
-          "type": {
-            "id": "http://holi0317.net/schemas/versions/0/type",
-            "type": "string"
-          },
-          "urls": {
-            "id": "http://holi0317.net/schemas/versions/0/urls",
-            "type": "array",
             "items": {
-              "id": "http://holi0317.net/schemas/versions/0/urls/0",
               "type": "object",
               "properties": {
-                "downloadType": {
-                  "id": "http://holi0317.net/schemas/versions/0/urls/0/downloadType",
+                "depends": {
+                  "id": "http://holi0317.net/schemas/versions/0/references/0/depends",
                   "type": "string"
                 },
-                "url": {
-                  "id": "http://holi0317.net/schemas/versions/0/urls/0/url",
+                "recommends": {
+                  "id": "http://holi0317.net/schemas/versions/0/references/0/recommends",
+                  "type": "string"
+                },
+                "suggests": {
+                  "id": "http://holi0317.net/schemas/versions/0/references/0/suggests",
+                  "type": "string"
+                },
+                "conflicts": {
+                  "id": "http://holi0317.net/schemas/versions/0/references/0/conflicts",
+                  "type": "string"
+                },
+                "provides": {
+                  "id": "http://holi0317.net/schemas/versions/0/references/0/provides",
                   "type": "string"
                 }
               }
             }
+          },
+          "type": {
+            "id": "http://holi0317.net/schemas/versions/0/type",
+            "type": "string",
+            "default": "release"
+          },
+          "installType": {
+            "id": "http://holi0317.net/schemas/versions/0/installType",
+            "type": "string",
+            "enum": [
+              "forgeMod",
+              "forgeCoreMod",
+              "liteloaderMod",
+              "extract",
+              "group"
+            ],
+            "default": "forgeMod"
+          },
+          "sha1": {
+            "id": "http://holi0317.net/schemas/versions/0/sha1",
+            "type": "string"
           }
         }
       }
@@ -97,7 +163,16 @@
       "id": "http://holi0317.net/schemas/urls",
       "type": "object",
       "additionalProperties": false,
-      "enum": ["website", "wiki", "forum", "donation", "issues", "source", "icon", "logo"],
+      "enum": [
+        "website",
+        "wiki",
+        "forum",
+        "donation",
+        "issues",
+        "source",
+        "icon",
+        "logo"
+      ],
       "properties": {
         "website": {
           "id": "http://holi0317.net/schemas/urls/website",
