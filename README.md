@@ -1,6 +1,8 @@
 # quickmod-json-schema
 Json schema for quickmod
 
+![](https://travis-ci.org/Holi0317/quickmod-json-schema.svg?branch=master)
+
 ## Introduction
 A QuickMod file is a JSON file that contains metadata about a mod for the sandbox game Minecraft. This metadata can be things like name, description, authors, different URLs (website, issue tracker, donations etc.), but also machine readable information about how to install the mod.
 
