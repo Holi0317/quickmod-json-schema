@@ -1,0 +1,103 @@
+{
+  "formatVersion": 1,
+  "updateUrl": "github://02JanDal@QuickMod/AdvancedGenetics.json",
+  "uid": "com.advGenetics.advancedgenetics",
+  "repo": "02JanDal.Testing",
+  "versions": [
+    {
+      "installType": "forgeMod",
+      "version": "1.5",
+      "name": "1.5",
+      "references": [
+        {
+          "uid": "net.minecraft",
+          "version": "1.7.2",
+          "type": "depends"
+        },
+        {
+          "uid": "net.minecraftforge",
+          "version": "10.13.4.1448",
+          "type": "depends"
+        }
+      ],
+      "sha1": "451b200f3fbcb4b868353c4e9e617fcd85d2dfcf",
+      "type": "Release",
+      "urls": [
+        {
+          "downloadType": "sequential",
+          "url": "http://adf.ly/dtCp6"
+        }
+      ]
+    },
+    {
+      "installType": "forgeMod",
+      "version": "1.5.2",
+      "name": "1.5.2",
+      "references": [
+        {
+          "uid": "net.minecraft",
+          "version": "1.7.2",
+          "type": "depends"
+        },
+        {
+          "uid": "net.minecraftforge",
+          "version": "10.13.4.1448",
+          "type": "depends"
+        }
+      ],
+      "sha1": "dd5164015857848774dd9fde1c481a35b0226922",
+      "type": "Release",
+      "urls": [
+        {
+          "downloadType": "sequential",
+          "url": "http://adf.ly/kFP9j"
+        }
+      ]
+    }
+  ],
+  "name": "Advanced Genetics",
+  "modId": "advancedgenetics",
+  "description": "A description of the mod",
+  "license": "Custom",
+  "urls": {
+    "website": [
+      "http://teamdna.humbook.info/advgen"
+    ],
+    "wiki": [
+      "http://teamdna.humbook.info/advgen"
+    ],
+    "forum": [
+      "http://teamdna.humbook.info/advgen"
+    ],
+    "donation": [
+      "http://teamdna.humbook.info/advgen"
+    ],
+    "issues": [
+      "http://teamdna.humbook.info/advgen"
+    ],
+    "source": [
+      "http://teamdna.humbook.info/advgen"
+    ],
+    "icon": [
+      "http://teamdna.humbook.info/advgen"
+    ],
+    "logo": [
+      "http://teamdna.humbook.info/advgen"
+    ]
+  },
+  "tags": [
+    "Genetics",
+    "testing"
+  ],
+  "categories": [
+    "Genetics",
+    "testing"
+  ],
+  "authors": {
+    "Author": "ObsiLP",
+    "Contributor": "ObsiLP"
+  },
+  "references": {
+    "codechicken.ForgeMultipart": "https://rawgit.com/Chicken-Bones/ForgeMultipart/master/FMP.json"
+  }
+}

@@ -30,7 +30,7 @@
         "type": "object",
         "required": [
           "urls",
-          "versions"
+          "version"
         ],
         "properties": {
           "urls": {
@@ -172,16 +172,6 @@
       "id": "http://holi0317.net/schemas/urls",
       "type": "object",
       "additionalProperties": false,
-      "enum": [
-        "website",
-        "wiki",
-        "forum",
-        "donation",
-        "issues",
-        "source",
-        "icon",
-        "logo"
-      ],
       "properties": {
         "website": {
           "id": "http://holi0317.net/schemas/urls/website",

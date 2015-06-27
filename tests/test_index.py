@@ -69,14 +69,14 @@ class TestIndexJson(unittest.TestCase):
         try:
             validate(self.valid_data_1, self.schema)
         except ValidationError as error:
-            self.fail('Minimal index.qm got error in schema. %s' % error)
+            self.fail('Minimal index.qm got error. %s' % error)
 
     def test_valid_2(self):
         'Valid data with optional data, baseUrl'
         try:
             validate(self.valid_data_2, self.schema)
         except ValidationError as error:
-            self.fail('index.qm with baseUrl got error in schema. %s' % error)
+            self.fail('index.qm with baseUrl got error. %s' % error)
 
     def test_invalid_1(self):
         'Some item got missing url or uid key'
