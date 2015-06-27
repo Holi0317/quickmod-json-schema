@@ -45,6 +45,10 @@ properties:
                     type: 'string'
                     enum: ['direct', 'parallel', 'sequential']
                     default: 'parallel'
+                  priority:
+                    id: 'http://holi0317.net/schemas/versions/0/urls/0/priority'
+                    type: 'number'
+                    default: 0
             }
             {
               type: 'object'
@@ -58,6 +62,9 @@ properties:
                   type: 'string'
                   enum: ['direct', 'parallel', 'sequential', 'encoded']
                   default: 'parallel'
+                priority:
+                  id: 'http://holi0317.net/schemas/versions/0/urls/0/priority'
+                  type: 'number'
             }
           ]
         version:
