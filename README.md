@@ -17,4 +17,5 @@ Different languages have their own implementation of json schema validation. Goo
 A JSON does not support comments, here are the files representing.
 
 index.json -- According to [Spec](http://blog.02jandal.xyz/QuickModDoc/qm_index_spec.html), the index quickmod file
+
 main.json -- Main quickmod file. Including version and such
