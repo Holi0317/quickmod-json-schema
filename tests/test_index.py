@@ -37,20 +37,25 @@ class TestIndexJson(unittest.TestCase):
         schema = os.path.join(THIS_DIR, '../index.json')
 
         # Without optional data
-        valid_data = os.path.join(data_dir, 'valid1.json')
+        valid_data_1 = os.path.join(data_dir, 'valid1.json')
         # With optional data, baseUrl
-        valid_data_optional = os.path.join(data_dir, 'valid2.json')
+        valid_data_2 = os.path.join(data_dir, 'valid2.json')
 
         # Some items got missing url or uid key
-        invalid_data = os.path.join(data_dir, 'invalid1.json')
+        invalid_data_1 = os.path.join(data_dir, 'invalid1.json')
         # Empty index array
-        invalid_data_empty_index = os.path.join(data_dir, 'invalid2.json')
+        invalid_data_2 = os.path.join(data_dir, 'invalid2.json')
+        # Totally irrelevant data
+        invalid_data_3 = os.path.join(data_dir, 'invalid3.json')
 
         self.schema = json_load(schema)
-        self.valid_datas = [json_load(valid_data),
-                            json_load(valid_data_optional)]
-        self.invalid_datas = [json_load(invalid_data),
-                              json_load(invalid_data_empty_index)]
+
+        self.valid_data_1 = json_load(valid_data_1)
+        self.valid_data_2 = json_load(valid_data_2)
+
+        self.invalid_data_1 = json_load(invalid_data_1)
+        self.invalid_data_2 = json_load(invalid_data_2)
+        self.invalid_data_3 = json_load(invalid_data_3)
 
     def test_schema_valid(self):
         'Test if schema is valid'
@@ -59,17 +64,31 @@ class TestIndexJson(unittest.TestCase):
         except SchemaError as error:
             self.fail('Index.json got incorrect schema. %s' % error)
 
-    def test_valid(self):
-        'If valid data is passed in, no exception should be raised'
-        # If exception raised, fail this test
+    def test_valid_1(self):
+        'Minimal, valid data test'
         try:
-            for data in self.valid_datas:
-                validate(data, self.schema)
+            validate(self.valid_data_1, self.schema)
         except ValidationError as error:
-            self.fail('Correct qm index data got error. %s' % error)
+            self.fail('Minimal index.qm got error in schema. %s' % error)
 
-    def test_incorrect_data(self):
-        'If invalid data is passed in, ValidationError should be raised'
+    def test_valid_2(self):
+        'Valid data with optional data, baseUrl'
+        try:
+            validate(self.valid_data_2, self.schema)
+        except ValidationError as error:
+            self.fail('index.qm with baseUrl got error in schema. %s' % error)
+
+    def test_invalid_1(self):
+        'Some item got missing url or uid key'
         with self.assertRaises(ValidationError):
-            for data in self.invalid_datas:
-                validate(data, self.schema)
+            validate(self.invalid_data_1, self.schema)
+
+    def test_invalid_2(self):
+        'Data with empty index array'
+        with self.assertRaises(ValidationError):
+            validate(self.invalid_data_2, self.schema)
+
+    def test_invalid_3(self):
+        'Totally irrelevant json data'
+        with self.assertRaises(ValidationError):
+            validate(self.invalid_data_3, self.schema)
