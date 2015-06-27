@@ -1,0 +1,137 @@
+{
+    "index": [
+        {
+            "uid": "mumfrey.macros",
+            "url": "MacroKeybindMod.json"
+        },
+        {
+            "uid": "com.advGenetics.advancedgenetics",
+            "url": "AdvancedGenetics.json"
+        },
+        {
+            "uid": "biomesoplenty",
+            "url": "BiomesOPlenty.json"
+        },
+        {
+            "uid": "WayofTime.alchemicalWizardry.bloodmagic",
+            "url": "BloodMagic.json"
+        },
+        {
+            "uid": "buildcraft",
+            "url": "BuildCraft.json"
+        },
+        {
+            "uid": "codechicken.chunkloader",
+            "url": "ChickenChunks.json"
+        },
+        {
+            "uid": "codechicken.core",
+            "url": "CodeChickenCore.json"
+        },
+        {
+            "uid": "codechicken.lib",
+            "url": "CodeChickenLib.json"
+        },
+        {
+            "uid": "cofh.core",
+            "url": "CoFHCore.json"
+        },
+        {
+            "uid": "cpw.mods.compactsolars",
+            "url": "CompactSolars.json"
+        },
+        {
+            "uid": "codechicken.enderstorage",
+            "url": "EnderStorage.json"
+        },
+        {
+            "uid": "exaliquo",
+            "url": "ExAliquo.json"
+        },
+        {
+            "uid": "exnihilo",
+            "url": "ExNihilo.json"
+        },
+        {
+            "uid": "forestry",
+            "url": "Forestry.json"
+        },
+        {
+            "uid": "ftb.unstable",
+            "url": "FTBUnstable.json"
+        },
+        {
+            "uid": "ic2.core",
+            "url": "IndustrialCraft2.json"
+        },
+        {
+            "uid": "cpw.mods.ironchest",
+            "url": "IronChests.json"
+        },
+        {
+            "uid": "mcp.mobius.betterbarrels.JABBA",
+            "url": "Jabba.json"
+        },
+        {
+            "uid": "mantle",
+            "url": "Mantle.json"
+        },
+        {
+            "uid": "powercrystals.minefactoryreloaded",
+            "url": "MineFactoryReloaded.json"
+        },
+        {
+            "uid": "natura",
+            "url": "Natura.json"
+        },
+        {
+            "uid": "net.bdew.neiaddons",
+            "url": "NEIAddons.json"
+        },
+        {
+            "uid": "neiplugins",
+            "url": "NEIPlugins.json"
+        },
+        {
+            "uid": "codechicken.nei",
+            "url": "NotEnoughItems.json"
+        },
+        {
+            "uid": "paintedstone",
+            "url": "PaintedStone.json"
+        },
+        {
+            "uid": "powercrystals.core",
+            "url": "PowerCrystalsCore.json"
+        },
+        {
+            "uid": "cofh.ThermalExpansion",
+            "url": "ThermalExpansion.json"
+        },
+        {
+            "uid": "tconstruct",
+            "url": "TinkersConstruct.json"
+        },
+        {
+            "uid": "tmechworks",
+            "url": "TinkersMechworks.json"
+        },
+        {
+            "uid": "codechicken.translocator",
+            "url": "Translocator.json"
+        },
+        {
+            "uid": "twilightforest",
+            "url": "TwilightForest.json"
+        },
+        {
+            "uid": "mcp.mobius.waila",
+            "url": "Waila.json"
+        },
+        {
+            "uid": "com.thevoxelbox.voxelmap.voxelmap",
+            "url": "ZansMinimap.json"
+        }
+    ],
+    "repo": "02JanDal.Testing"
+}

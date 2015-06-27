@@ -1,0 +1,71 @@
+{
+    "authors": {
+        "Author": [
+            "ObsiLP"
+        ]
+    },
+    "categories": [
+        "Biology"
+    ],
+    "description": "A mod created by ObsiLP which adds Genetic-Science to Minecraft.",
+    "formatVersion": 1,
+    "license": "",
+    "modId": "advancedgenetics",
+    "name": "Advanced Genetics",
+    "nemName": "AdvancedGenetics",
+    "references": {
+    },
+    "repo": "02JanDal.Testing",
+    "tags": [
+        "DNA"
+    ],
+    "uid": "com.advGenetics.advancedgenetics",
+    "updateUrl": "github://02JanDal@QuickMod/AdvancedGenetics.json",
+    "urls": {
+        "icon": [
+            "http://teamdna.humbook.info/advgen/images/favico_advgen.png"
+        ],
+        "logo": [
+            "http://teamdna.humbook.info/advgen/wiki/mc17/images/logo.png"
+        ],
+        "website": [
+            "http://ag.teamdna.de/"
+        ]
+    },
+    "versions": [
+        {
+            "installType": "forgeMod",
+            "mcCompat": [
+                "1.7.2"
+            ],
+            "name": "1.5",
+            "references": [
+            ],
+            "sha1": "451b200f3fbcb4b868353c4e9e617fcd85d2dfcf",
+            "type": "Release",
+            "urls": [
+                {
+                    "downloadType": "sequential",
+                    "url": "http://adf.ly/dtCp6"
+                }
+            ]
+        },
+        {
+            "installType": "forgeMod",
+            "mcCompat": [
+                "1.7.2"
+            ],
+            "name": "1.5.2",
+            "references": [
+            ],
+            "sha1": "dd5164015857848774dd9fde1c481a35b0226922",
+            "type": "Release",
+            "urls": [
+                {
+                    "downloadType": "sequential",
+                    "url": "http://adf.ly/kFP9j"
+                }
+            ]
+        }
+    ]
+}
